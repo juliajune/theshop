@@ -10,12 +10,12 @@
     - по принципу Mobile First 
     - без использования CSS и Javascript фреймворков.    
    В проекте должны быть следующие страницы:
-   	- Главная - есть
+   	- ![Главная](https://github.com/juliajune/theshop/raw/main/desktop_preview/TheShop_home.jpg) - есть
    	- Каталог товаров -  сверстаны отдельные элементы
    	- Страница товара -  сверстаны отдельные элементы
    	- Корзина -  сверстаны отдельные элементы
    	- Страница оформления покупки.
-   	- Блог со списком статей - есть
+   	- ![Блог со списком статей](https://github.com/juliajune/theshop/raw/main/desktop_preview/TheShop_blog.jpg)- есть
    	- Страница единичной статьи - есть
    	- Страница контактов - нет
    	- Страница регистрации - нет
@@ -24,12 +24,12 @@
    	- wishlist
 
 ## В проекте используются
-    - <a href="https://pugjs.org/"> шаблонизатор PUG </a>
+    - шаблонизатор [PUG](https://pugjs.org)
     - препроцессор SCSS
     - javacript
-    - <a href="https://refreshless.com/nouislider/"> noUiSlider </a> javacript plugin для слайдера цен
-    - сборщик проектов <a href="https://gulpjs.com/">Gulp</a>
-    - за основу взята <a href="https://github.com/juliajune/gulp-template">сборка Gulp</a>
+    - [noUiSlider](https://refreshless.com/nouislider) javacript plugin для слайдера цен    	
+    - сборщик проектов [Gulp](https://gulpjs.com)
+    - за основу взята [сборка Gulp](https://github.com/juliajune/gulp-template)
 
 ## Запуск проекта
    - скачать или клонировать репозиторий.
