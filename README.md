@@ -37,20 +37,29 @@
    	- Страница авторизации - нет
 
    	- Страница аккаунта
-   	
+
    	- wishlist
 
 ## В проекте используются
-    - шаблонизатор [PUG](https://pugjs.org)
+
+    - шаблонизатор PUG https://pugjs.org
+
     - препроцессор SCSS
+
     - javacript
-    - [noUiSlider](https://refreshless.com/nouislider) javacript plugin для слайдера цен    	
-    - сборщик проектов [Gulp](https://gulpjs.com)
-    - за основу взята [сборка Gulp](https://github.com/juliajune/gulp-template)
+
+    - noUiSlider https://refreshless.com/nouislider javacript plugin для слайдера цен
+
+    - сборщик проектов Gulp https://gulpjs.com
+
+    - за основу взята сборка Gulp https://github.com/juliajune/gulp-template
 
 ## Запуск проекта
+
    - скачать или клонировать репозиторий.
+
    - команда npm i
+   
    - команда start (или gulp start)
 
 
