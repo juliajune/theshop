@@ -1,0 +1,67 @@
+// -- Form search --
+.form-search{
+	&__group{
+		position: relative;				
+	}
+	&__input{
+		display: inline-block;
+		width: 100%;
+		background-color: $color-white;
+		color: $color-black;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-size: 11px;
+		height: 26px;
+		line-height: 26px;
+		padding: 5px 10px 5px 38px;
+		border-left: $border-gray-light;
+		border-right: $border-gray-light;
+		border-top: $border-white;
+		border-bottom: $border-white;
+		transition: $hover-effect;
+		&::placeholder{
+			text-transform: uppercase;
+			color: $color-black;
+			font-size: 11px;
+			opacity: 1;
+			transition: $hover-effect;
+		}
+		&:focus{
+			border: $border-gray;
+			
+		}
+		&:focus::placeholder{
+			opacity: 0;
+			transition: $hover-effect;			
+		}
+	}
+	&__button{
+		position: absolute;
+		display: inline-block;
+		width: 36px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 99;
+		background-image: url(../img/search.svg);
+		background-repeat: no-repeat;
+		background-size: 20px 40px;
+		background-color: transparent;
+		background-position: center;
+		border: none;		
+		svg{
+			fill: $color-black;
+			height: 12px;
+			width: 12px;
+			transition: $hover-effect;
+		}
+		&:hover{
+			cursor: pointer;
+			svg{
+				fill: $color-search-gray;
+				
+			}
+		}
+
+	}
+}

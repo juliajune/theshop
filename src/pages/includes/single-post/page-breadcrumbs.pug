@@ -1,0 +1,11 @@
+- 
+	var breadcrumbs = [
+		{name: 'home', link: 'index.html'},
+		{name: 'women style', link: 'blog.html'},
+		{name: 'what's the best beauty look to wear width a metallic?', link: '#'},           
+	];
+
+.page-breadcrumbs
+	+breadcrumbsMixin(breadcrumbs)
+	a.page-breadcrumbs__return(href="javascript:history.back();")
+		span Return to Previous Page

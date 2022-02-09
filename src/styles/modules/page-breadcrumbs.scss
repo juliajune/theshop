@@ -1,0 +1,31 @@
+.page-breadcrumbs{
+	  	display: flex;
+		justify-content: space-between;		
+	&__return{
+		display: inline-block;
+		color: $color-gray;
+		font-size: 10px;
+		text-transform: capitalize;
+		position: relative;
+		padding: 5px 0px 5px 15px;
+		transition: $hover-effect;
+		span{
+			display: inline-block;
+			border-bottom: $border-transparent;
+			transition: $hover-effect;
+		}
+		&::before{
+			content:"<";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 4px;			
+		}
+		&:hover{
+			color: $color-black;
+			span{
+				border-bottom: $border-gray;
+			}
+		}
+	}
+}

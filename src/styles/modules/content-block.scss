@@ -1,0 +1,27 @@
+// -- Content-block --
+.content-block{
+	padding: 20px;
+	border: $border-gray;
+	&__title{
+		font-size: 12px;
+		font-family: $font-text;
+		color: $color-black;
+		text-transform: uppercase;		
+		margin-bottom: 30px;
+		&_text-center{
+			text-align: center;
+		}
+		&_double{
+			margin-bottom: 5px;
+		}		
+	}
+	&__description{
+		font-size: 11px;		
+		font-family: $font-text-second;
+		color: $color-gray;
+		margin-bottom: 20px;
+	}
+	&_no-border{
+		border: $border-transparent;
+	}	
+}

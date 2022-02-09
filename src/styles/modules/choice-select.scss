@@ -1,0 +1,71 @@
+//Choice select
+.choice-select{
+	position: relative;
+	&__button{
+		display: block;
+		position: relative;
+		background-color: transparent;
+		border: none;
+		font-size: 10px;
+		color: $color-gray;
+		text-transform: uppercase;
+		padding: 5px 20px 5px 5px;
+		&:hover{
+			cursor: pointer;
+		}
+		&:focus{
+			outline: none;
+		}
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			border: 3px solid transparent;
+			border-bottom: none;
+			border-top: 4px solid $color-gray;
+			right: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none; /* Снимаем клик со стрелки */
+		}
+		&_active{
+			&::after{
+				border-top: none;
+				border-bottom: 4px solid $color-gray;
+			}
+		}
+	}
+	&__list{
+		overflow: hidden;
+		background-color: $color-white;
+		position: absolute;
+		width: 100%;
+		z-index: 99;
+		box-shadow: $box-shadow;
+		visibility: hidden;
+		opacity: 0;
+		transform-origin: 0% 0%;
+		transform: rotateX(-90deg);
+		transition: $transition-duration;
+		&_visible{
+			visibility: visible;
+			opacity: 1;
+			transform: rotateX(0deg);
+			transition: $transition-duration;			
+		}
+	}
+	&__list-item{
+		display: block;
+		padding: 5px;
+		text-transform: uppercase;
+		font-size: 10px;
+		background-color: $color-white;
+		color: $color-black;
+		transition: $transition-duration;
+		&:hover{
+			background-color: $color-gray;
+			cursor: pointer;
+			transition: $transition-duration;
+		}		
+	}
+}

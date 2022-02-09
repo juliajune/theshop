@@ -1,0 +1,11 @@
+//-- Widget --
+.widget{
+	border: $border-gray;
+	padding: 20px 28px;
+	&__title{
+		margin-bottom: 20px;		
+	}
+}
+
+@import 'posts-widget';
+@import 'wg-post';

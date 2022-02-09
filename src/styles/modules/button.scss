@@ -1,0 +1,26 @@
+// -- Button --
+.button {
+	width: 100%;
+	cursor: pointer;
+	text-transform: uppercase;
+	min-height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+	font-family: $font-text;
+	background-color: $color-black;
+	color: $color-white;
+	border: 0;
+	box-shadow: none;
+	padding: 0px 10px;
+	transition: $hover-effect;
+	&:hover{
+		background-color: $color-gray;
+		color: $color-black;
+	}
+	&_small{
+		font-size: 10px;
+	}
+}			
+			

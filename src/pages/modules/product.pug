@@ -1,0 +1,19 @@
+//- Product Item mixin
+mixin productItem(productLink, popupLink, productImage, productLabel, productTitle, productPrice)
+	.product__preview
+		.product__image
+			a(href='#' + productLink target='_blank').product__link
+				img(src= productImage alt= productTitle title= productTitle)
+		if productLabel== 'new'
+			.product__label
+				.product-label.product-label_black
+					span= productLabel
+		if productLabel== 'sale'
+			.product__label
+				.product-label.product-label_red
+					span= productLabel						
+		a(href='#' + popupLink).product__quick-shop quick view
+	.product__content
+		.product__title
+			a(href='#' + productLink)= productTitle 
+		.product__price='$' + productPrice

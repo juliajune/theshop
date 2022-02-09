@@ -1,0 +1,19 @@
+//--Start rating--
+.rating{
+	display: inline-block;
+	font-size: 0;
+	.rating__item {
+		padding: 0;
+		font-size: 14px;
+		line-height: 1;
+		color: $color-gold;
+		&:before{
+			content: '☆';
+		}
+		&_active{
+			&:before{
+				content: '★';
+			}			
+		}
+	}
+}

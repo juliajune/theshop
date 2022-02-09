@@ -1,0 +1,36 @@
+// -- Tag cloud --
+.tag-cloud{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0px -2px;
+	&__item{
+		padding: 0px 2px;
+		line-height: 24px;
+		&:nth-child(1n){
+			font-size: 10px;
+		}
+		&:nth-child(2n){
+			font-size: 12px;
+		}
+		&:nth-child(3n){
+			font-size: 14px;
+		}
+		&:nth-child(4n){
+			font-size: 18px;
+		}
+		&:nth-child(5n){
+			font-size: 24px;
+		}
+	}
+	&__link{
+		display: inline-block;		
+		text-transform: uppercase;
+		font-family: $font-text;
+		color: black;
+		transition: $hover-effect;
+		&:hover{
+			color: $color-gray;
+		}
+	}
+}

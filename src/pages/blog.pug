@@ -1,0 +1,80 @@
+extends common/layout
+block content
+	.page
+		.container
+			.page__breadcrumbs
+				include includes/cart/page-breadcrumbs
+			.page__container
+				//Sidebar
+				.page__sidebar.page-sidebar
+					.page-sidebar__widget.blog-widget
+						.blog-widget__title categories
+						.blog-widget__body
+							.blog-widget__content
+								ul.blog-widget__list
+									li.blog-widget__item
+										a.blog-widget__link(href="#") Celebrity Style
+											span (39)
+									li.blog-widget__item
+										a.blog-widget__link(href="#") Fashion Shows
+											span (15)
+									li.blog-widget__item
+										a.blog-widget__link(href="#") Shopping
+											span (27)
+					.page-sidebar__widget.blog-widget
+						.blog-widget__title labels
+						.blog-widget__body
+							.blog-widget__content
+								ul.blog-widget__tags.tag-cloud
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") ALAÏA ALEXA					
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") Style						
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") workshop
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") Style					
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") woomen
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") ALAÏA ALEXA					
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") Style						
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") workshop
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") Style					
+									li.tag-cloud__item
+										a.tag-cloud__link(href="#") woomen
+				//Content
+				.page__content.blog
+					.blog__posts
+						.blog__item.blog-post
+							h2.blog-post__title.post-title
+								a(href="single-post.html")
+									|what’s the best beauty look to wear with a metallic?
+							.blog-post__meta.post-meta
+								a.post-meta__date 11 January 2015								
+							a.blog-post__preview(href="single-post.html")
+								img(src="img/Watermark.jpg" alt="|what’s the best beauty look to wear with a metallic?" title="|what’s the best beauty look to wear with a metallic?")
+							.blog-post__excerpt.post-excerpt
+								|Every color has a personality, an emotion that you channel while wearing it. Red 
+								|is exciting a color to evoke your inner daring. Then, there’s pink: safe, benign, 
+								|and obviously pretty. Or is it?
+						.blog__item.blog-post
+							h2.blog-post__title.post-title
+								a(href="#")
+									|what’s the best beauty look to wear with a metallic?
+							.blog-post__meta.post-meta
+								a.post-meta__date 11 January 2015								
+							a.blog-post__preview
+								img(src="img/blog-post-1.jpg" alt="|what’s the best beauty look to wear with a metallic?" title="|what’s the best beauty look to wear with a metallic?")
+							.blog-post__excerpt.post-excerpt
+								|Every color has a personality, an emotion that you channel while wearing it. Red 
+								|is exciting a color to evoke your inner daring. Then, there’s pink: safe, benign, 
+								|and obviously pretty. Or is it?
+					.blog__pagination.blog-pagination
+						a.blog-pagination__item(href="#") 
+							span older posts
+						a.blog-pagination__item(href="#") 
+							span newer posts

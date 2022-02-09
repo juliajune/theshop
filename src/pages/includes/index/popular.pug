@@ -1,0 +1,22 @@
+//- Include product mixin
+//- mixin productItem(productLink, popupLink, productImage, productLabel, productTitle, productPrice)
+
+include ../../modules/product
+
+//----- Most popular -----
+.popular
+	h2.section__title.unit-title.unit-title_left-line most popular
+	.popular__content
+		.popular__item.product
+			+productItem('product_1', 'popup_1', 'img/product-1.jpg', 'new', 'detailed swing dress', '1100')
+		.popular__item.product
+			+productItem('product_2', 'popup_2', 'img/product-2.jpg', 'sale', 'maxararzy frilled dress', '990')
+		.popular__item.product
+			+productItem('product_3', 'popup_3', 'img/product-3.jpg', '', 'maxararzy frilled dress', '990')
+		.popular__item.product
+			+productItem('product_1', 'popup_1', 'img/product-1.jpg', 'new', 'detailed swing dress', '1100')
+		.popular__item.product
+			+productItem('product_2', 'popup_2', 'img/product-2.jpg', 'sale', 'maxararzy frilled dress', '990')
+		.popular__item.product
+			+productItem('product_3', 'popup_3', 'img/product-3.jpg', '', 'maxararzy frilled dress', '990')
+	//----- /Most popular -----

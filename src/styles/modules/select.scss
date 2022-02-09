@@ -1,0 +1,64 @@
+// -- Select --
+.select{
+	position: relative;
+	&__button{
+		background-color: $color-gray-light;
+		border: $border-gray;
+		height: 28px;
+		line-height: 28px;
+		border-radius: $border-radius;
+		color: $color-black;
+		font-size: 11px;
+		font-family: $font-text;
+		text-transform: uppercase;
+		width: 100%;
+		position: relative;
+		&:after{
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			border: solid black;
+		    border-width: 0 3px 3px 0;	    
+		    padding: 3px;
+		    transform: rotate(45deg);
+	    	-webkit-transform: rotate(45deg);
+		}
+	}
+	&__list{
+		overflow: hidden;
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 999;
+		top: 28px;
+		left: 13px;
+		width: calc(100% - 26px);
+		box-shadow: $box-shadow;
+		transform-origin: 0% 0%;
+		transform: rotateX(-90deg);
+		transition: $hover-effect;
+		&_visible{
+			visibility: visible;
+			opacity: 1;
+			transform: rotateX(0deg);
+			transition: $hover-effect;
+		}
+	}
+	&__list-item{
+		cursor: pointer;
+		padding: 15px;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: $color-black;
+		background-color: $color-white;
+		border-bottom: 0px;
+		transition: $hover-effect;
+		&:hover{
+			background-color: $color-gray-light;
+			transition: $hover-effect;
+		}
+	}
+}
+// -- /Select --

@@ -1,0 +1,7 @@
+mixin selectMixin(selectArray)
+	.select
+		button.select__button size
+		input.select__input-hidden(type="hidden")
+		ul.select__list
+			each item in selectArray			
+				li.select__list-item(data-value=item.value)= item.name

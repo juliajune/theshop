@@ -1,0 +1,42 @@
+// Mobile first
+$mediaWidthMobile: 320px;
+$mediaWidthTablet: 768px;
+$mediaWidth992: 992px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1366px;
+
+//Colors
+$color-transparent: transparent;
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #aaa;
+$color-gray-light: #f7f7f7;
+$color-red: #c50e1f;
+$color-cart-gray: #404040;
+$color-search-gray: #e4e2e1;
+$color-gray-more-light: #e4e2e1;
+$color-gold: #aea012;
+
+//Animation
+$transition-duration: 0.5s;
+
+$hover-effect: all 0.5s ease-out;
+$zoom: scale(1.1);
+
+//box-shadow
+$box-shadow: 0px 7px 15px 0px rgba(1, 2, 3, 0.15);
+
+//border
+$border-transparent: 1px solid transparent;
+$border-gray: 1px solid $color-gray;
+$border-gray-light: 1px solid $color-search-gray;
+$border-white: 1px solid $color-white;
+$border-black: 1px solid $color-black;
+
+//border-radius
+$border-radius: 14px;
+
+//fonts
+$font-title: 'Playfair Display SC', serif;
+$font-text: 'Nunito', sans-serif;
+$font-text-second: Arial, Geneva, Helvetica, sans-serif;

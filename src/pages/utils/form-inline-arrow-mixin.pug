@@ -1,0 +1,6 @@
+mixin formInlineArrow(formId, inputName)
+	form.form-inline-arrow(method="POST" action="#" id= formId)
+		.form-inline-arrow__group
+			input.form-inline-arrow__input.input(type="text" id= inputName)
+			button.form-inline-arrow__button
+				+icon("arrow-right")

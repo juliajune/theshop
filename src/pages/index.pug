@@ -1,0 +1,84 @@
+extends common/layout
+block content
+	//include includes/index/slider
+	include includes/index/whats_new
+	//- Widget post mixin
+	mixin wgPost(postLink, postImage, postTitle, postExcerpt)
+		a.wg-post__image(href= postLink)
+			img(src= postImage  title= postTitle alt= postTitle)
+		.wg-post__content
+			.wg-post__title
+				a(href= postLink)=postTitle
+			.wg-post__excerpt
+				a(href= postLink)=postExcerpt
+	.container
+		.middle-content
+			.middle-content_left
+				include includes/index/popular
+			.middle-content_right.sidebar
+				.sidebar__widget.widget
+					.widget__title.unit-title.unit-title_center from our blog
+					.widget__content.posts-widget
+						.posts-widget__item.wg-post
+							a.wg-post__image(href="#")
+								img(src="img/blog-item-1.jpg" title="Best summer trends" alt="Best summer trends")
+							.wg-post__content
+								.wg-post__title 
+									a(href="#") best summer trends
+								.wg-post__excerpt 
+									a(href="#") we know what you need this summer. most fashion looks
+						.posts-widget__item.wg-post
+							a.wg-post__image(href="#")
+								img(src="img/blog-item-1.jpg" title="Best summer trends" alt="Best summer trends")
+							.wg-post__content
+								.wg-post__title 
+									a(href="#") best summer trends
+								.wg-post__excerpt 
+									a(href="#") we know what you need this summer. most fashion looks
+						.posts-widget__item.wg-post
+							+wgPost("postLink", "postImage", "postTitle", "postExcerpt")
+	.numbers
+		.container
+			ol.advantages
+				li.advantages__item
+					span.advantages__item-title Free Shipping
+					span.advantages__item-description On all orders over $500
+				li.advantages__item
+					span.advantages__item-title Money back guarantee
+					span.advantages__item-description On all orders
+				li.advantages__item
+					span.advantages__item-title Worldwide Delivery
+					span.advantages__item-description To over 80 countries	
+	.block
+		.container
+			include modules/accordion	
+	.block
+		.container
+			include modules/review			
+	.block
+		.container
+			include modules/radio			
+	.block
+		.container
+			include modules/checkbox	
+	.block
+		.container
+			include modules/pagination
+	.block
+		.container
+			#steps-slider
+			.slider__input-wrap
+				input#input-with-keypress-0.slider__input(type="text")
+				input#input-with-keypress-1.slider__input(type="text")
+	.block
+		.container
+			include modules/stepper
+	.block
+		.container
+			
+	.block
+		.container
+			a(href="cart.html") go to cart
+	.block
+		.container
+			a(href="blog.html") go to blog

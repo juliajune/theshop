@@ -1,0 +1,8 @@
+//- Whats New Item
+mixin whatsNewItem(image, caption, title, subtitle)
+	.new-item__image 
+		img(src= image alt= caption title= caption)
+		span.new-item__caption= caption
+	.new-item__content
+		.new-item__title= title
+		.new-item__subtitle= subtitle

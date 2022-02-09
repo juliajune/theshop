@@ -1,0 +1,67 @@
+//Unit title
+
+.unit-title{
+	font-size: 24px;
+	font-family: $font-title;
+	color: $color-black;
+	text-transform: uppercase;
+	&_center{
+		text-align: center;
+	}
+	&_left{
+		text-align: left;
+	}
+	&_right{
+		text-align: right;
+	}
+	&_center-line, &_left-line{
+		position: relative;
+		&:before,
+		&:after {
+			content:' ';
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20%;
+			height: 1px;			
+			background-color: $color-gray;
+		}
+		&:before{
+			left: 0;
+		}
+		&:after{
+			right: 0;
+		}
+	}
+	&_center-line{
+		@include media-tablet {
+			&:before,
+			&:after {
+				width: 35%;
+			}        	
+		}
+		@include media-tablet-horizontal {
+			&:before,
+			&:after {
+				width: 40%;
+			} 
+		}
+	}
+	&_left-line{
+		@include media-tablet {
+			text-align: left;
+			&:before{
+				display: none;
+			}
+			&:after{
+				width: 65%;
+			}
+		}
+		@include media-tablet-horizontal {
+			&:after{
+				width: 70%;
+			}
+		}
+	}	
+}

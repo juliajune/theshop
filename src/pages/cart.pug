@@ -1,0 +1,102 @@
+extends common/layout
+block content
+	.page
+		.container
+			.page__breadcrumbs
+				include includes/cart/page-breadcrumbs
+			.page__title cart
+			.page__content
+				.page__cart-products.cart-products
+					.cart-products__item.cart-prod
+						.cart-prod__head.delete-button x
+						.cart-prod__body
+							.cart-prod__image 
+								img(src="img/cart-prod-1.jpg" alt="yellow swing dress" title="yellow swing dress")
+							.cart-prod__content
+								.cart-prod__title 
+									a(href="#" target="_blank") yellow swing dress
+								.cart-prod__line
+									.cart-prod__item color:
+										span blue
+									.cart-prod__item size:
+										span 12
+								.cart-prod__line
+									.cart-prod__item gty
+										include modules/stepper
+									.cart-prod__item 
+										button.cart-prod__button
+											icon('repeat')
+									.cart-prod__item $275									
+								.cart-prod__line
+									a.cart-prod__button(href="#")
+	.page
+		.container
+			.page__title cart
+			.page__content
+				.page__table.cart-table
+					.cart-table__tr
+						.cart-table__td
+							img(src="img/cart-prod-1.jpg" alt="yellow swing dress" title="yellow swing dress")
+						.cart-table__td
+							.cart-prod__title 
+								a(href="#" target="_blank") yellow swing dress
+							.cart-prod__specifications 
+								span color: blue
+								span size: span 12
+						.cart-table__td
+							.cart-prod__cost $275.00
+						.cart-table__td
+							.cart-prod__count
+								include modules/stepper
+								a.cart-prod__button(href="#") Update
+						.cart-table__td $275.00
+					.cart-table__tr
+						a.cart-prod__button(href="#") Edit item
+
+	.page
+		.container
+			.page__title cart
+			.page__content
+				.products-cart
+					.products-cart__head
+						.prod-cart__body product
+						.prod-cart__price price
+						.prod-cart__quantity quantity
+						.prod-cart__price-total.prod-cart__price-total_text-right amount
+					.products-cart__item.prod-cart
+						.prod-cart__body
+							.prod-cart__img
+								img(src="img/cart-prod-1.jpg" alt="yellow swing dress" title="yellow swing dress")
+							.prod-cart__content
+								.prod-cart__title 
+									a(href="#" target="_blank") yellow swing dress
+								.prod-cart__info
+									.prod-cart__color color: blue
+									.prod-cart__size size: 12
+						.prod-cart__price $275
+						.prod-cart__quantity
+							include includes/cart/stepper
+						.prod-cart__price-total.prod-cart__price-total_text-right $275
+	.page
+		.container
+			.page__title cart
+			.page__content
+				.page__row  cart table				 
+				.page__row
+					.page__col
+						.content-block
+							.content-block__title.content-block__title_double estimate Delivery
+							.content-block__description Enter your destination to get a delivery estimate
+							.content-block__content
+								
+								
+					.page__col
+						.content-block
+							.content-block__title.content-block__title_text-center redeem discount voucher?
+							.content-block__content
+								+formInlineArrow("discount-form", "discount-code")
+						.content-block.content-block_no-border
+							include includes/cart/support
+					.page__col
+						.content-block.content-block_no-border
+							include includes/cart/cart-total

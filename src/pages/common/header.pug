@@ -1,0 +1,130 @@
+
+//----- HEADER -----
+header.header
+	.header__top-wrapper
+		.container
+			.header__top
+				form.header__form(method="#" action="#")
+					.header__form-item.header__form-item_desktop
+						include header/choice-select-company
+					.header__form-item
+						include header/choice-select-currency
+					.header__form-item
+						include header/choice-select-language
+				.header__offer.header__offer_tablet free shipping on orders above 500 $
+				.header__user.header__user_desktop
+					ul.border-menu
+						li.border-menu__item
+							a.border-menu__link(a href="#" target="_blank") my account
+						li.border-menu__item
+							a.border-menu__link(a href="#" target="_blank") wish list
+						li.border-menu__item
+							a.border-menu__link(a href="#" target="_blank") chekout 
+						li.border-menu__item
+							a.border-menu__link(a href="#" target="_blank") log in
+				.header__cart.header__cart_mobile
+					.cart
+						a(href="#").cart__button
+							+icon('bag')
+						.cart__count cart 
+							span (0)				
+	.container
+		.header__bottom
+			a(href="#").header__logo.logo the shop
+			.header__action.header__action_desktop
+				.header__search.header__search_desktop
+					.form-search
+						.form-search__group
+							input.form-search__input(placeholder="search")
+							button.form-search__button 
+								+icon('search')
+				.header__cart.header__cart_desktop
+					.cart.cart_dark
+						a(href="#").cart__button
+							+icon('bag')
+						.cart__count cart 
+							span (0)	
+	.container
+		nav.header__nav.header-nav
+			.header-nav__button
+				span
+			ul.header-nav__list
+				li.header-nav__item
+					a(href="#").header-nav__link women
+					.header-nav__mega-menu
+						.mega-menu
+							.mega-menu__col
+								ul.mega-menu__list
+									li.mega-menu__item close
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink dresses
+											li.mega-menu__subitem
+												a.mega-menu__sublink sweater
+											li.mega-menu__subitem
+												a.mega-menu__sublink pants	
+									li.mega-menu__item shoes
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink sneakers
+											li.mega-menu__subitem
+												a.mega-menu__sublink sandals
+							.mega-menu__col
+								ul.mega-menu__list
+									li.mega-menu__item close
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink dresses
+											li.mega-menu__subitem
+												a.mega-menu__sublink sweater
+											li.mega-menu__subitem
+												a.mega-menu__sublink pants	
+									li.mega-menu__item shoes
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink sneakers
+											li.mega-menu__subitem
+												a.mega-menu__sublink sandals
+							.mega-menu__col
+								ul.mega-menu__list
+									li.mega-menu__item close
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink dresses
+											li.mega-menu__subitem
+												a.mega-menu__sublink sweater
+											li.mega-menu__subitem
+												a.mega-menu__sublink pants	
+									li.mega-menu__item shoes
+										ul.mega-menu__sublist
+											li.mega-menu__subitem
+												a.mega-menu__sublink sneakers
+											li.mega-menu__subitem
+												a.mega-menu__sublink sandals
+				li.header-nav__item
+					a(href="#").header-nav__link men
+				li.header-nav__item
+					a(href="#").header-nav__link kids
+				li.header-nav__item
+					a(href="#").header-nav__link accessories
+				li.header-nav__item
+					a(href="#").header-nav__link whats new
+				li.header-nav__item
+					a(href="#").header-nav__link brands
+				li.header-nav__item
+					a(href="#").header-nav__link sale
+				li.header-nav__item
+					a(href="#").header-nav__link blog	
+					
+			.header__search.header__search_mobile-tablet
+				.form-search
+					.form-search__group
+						input.form-search__input(placeholder="search")
+						button.form-search__button 
+							+icon('search')
+			.header__cart.header__cart_tablet
+				.cart.cart_dark
+					a(href="#").cart__button
+						+icon('bag')
+					.cart__count cart 
+						span (0)

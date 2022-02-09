@@ -1,0 +1,24 @@
+//-- Single post --
+.single-post{
+	&__title{
+		margin-bottom: 20px;
+	}
+	&__meta{
+		margin-bottom: 30px;
+	}
+	&__preview{
+		margin-bottom: 15px;
+	}
+	&__content{
+		margin-bottom: 30px;
+	}
+	&__reviews{
+		margin-bottom: 30px;
+	}
+	&__review-form{
+		margin-bottom: 30px;
+	}
+	&__pagination{
+		margin-bottom: 30px;
+	}
+}

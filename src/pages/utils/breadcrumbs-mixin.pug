@@ -1,0 +1,10 @@
+//- BreadCrumbs Mixin
+//- breadcrums - value array
+mixin breadcrumbsMixin(breadcrumbs)       
+	ul.breadcrumbs
+		each item, index in breadcrumbs
+			if(breadcrumbs.length === index + 1)
+				li.breadcrumbs__item.breadcrumbs__item_active=item.name
+			else
+				li.breadcrumbs__item 
+					a.breadcrumbs__link(href= item.link)=item.name

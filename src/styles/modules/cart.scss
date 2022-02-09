@@ -1,0 +1,58 @@
+//Header cart
+.cart{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	&__button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		background-color: $color-cart-gray;
+		border-radius: 50%;
+		color: $color-white;
+		margin-right: 6px;
+		transition: $hover-effect;
+		svg{
+			fill: $color-white;
+			transition: $hover-effect;
+		}
+		&:hover{
+			color: $color-cart-gray;
+			background-color: $color-white;
+			svg{
+				fill: $color-cart-gray;
+			}
+		}
+
+	}
+	&__count{
+		flex-shrink: 0;
+		text-transform: uppercase;
+		color: $color-white;
+		font-size: 11px;
+		font-family: $font-text;
+
+	}
+	&_dark{
+		.cart__button{
+			color: $color-white;
+			background-color: $color-black;
+			border: $border-black;
+			svg{
+				fill: $color-white;
+			}
+			&:hover{
+				background-color: $color-white;
+				svg{
+					fill: $color-black;
+				}
+			}
+		}
+		.cart__count{
+			color: $color-black;
+		}
+
+	}
+}

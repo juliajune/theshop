@@ -1,0 +1,52 @@
+// -- Form subscription --
+.form-subscription{
+	display: flex;
+	align-items: center;
+	&__label{
+		text-transform: uppercase;
+		font-family: $font-title;
+		color: $color-white;
+		font-size: 14px;
+		margin-right: 7px;
+		@include media-tablet {
+			margin-right: 10px;
+		}		
+	}
+	&__group{
+		position: relative;
+		width: 200px;
+		@include media-tablet {
+			width: 278px;
+		}
+	}
+	&__input{
+		display: inline-block;
+		width: 100%;
+		background-color: $color-white;
+		color: $color-black;
+		font-family: $font-text;
+		text-transform: uppercase;
+		height: 35px;
+		line-height: 35px;
+		padding: 5px 10px;
+		border: $border-gray;
+	}
+	&__button{
+		position: absolute;
+		display: inline-block;
+		width: 34px;
+		height: 34px;
+		right: 0;
+		top: 0;
+		z-index: 99;
+		background-image: url(../img/next.svg);
+		background-repeat: no-repeat;
+		background-size: 20px 40px;
+		background-color: transparent;
+		background-position: center;
+		border: none;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}

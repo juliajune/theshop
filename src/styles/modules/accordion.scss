@@ -1,0 +1,64 @@
+// Аккордеон с информацией о товаре  на странице товара
+.accordion{
+	&__item{
+		border-top: $border-gray-light;		
+		&:last-child{
+			border-bottom: $border-gray-light;	
+		}
+	}
+	&__title{
+		position: relative;
+		font-family: $font-title;
+		text-transform: uppercase;
+		color: $color-black;
+		font-size: 14px;
+		height: 36px;
+		line-height: 36px;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			border: 6px solid transparent;
+			border-right: none;
+			border-left: 6px solid $color-black;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);			
+		}
+		&_active{
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				border: 6px solid transparent;
+				border-bottom: none;
+				border-top: 6px solid $color-black;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);			
+			}
+		}
+	}
+	&__content{
+		box-sizing: content-box;
+		visibility: hidden;
+		opacity: 0;
+		background-color: red;
+		transform-origin: 0% 0%;
+		transform: rotateX(-90deg);
+		transition: $hover-effect;	
+		font-family: Arial;
+		color: $color-gray;
+		font-size: 11px;
+		line-height: 14px;
+		font-weight: 300;
+		&_active{
+			visibility: visible;
+			opacity: 1;
+			//padding: 15px 0 10px 0px;
+			transform: rotateX(0deg);
+			transition: $hover-effect;		
+		}
+	}
+}
+				

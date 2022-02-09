@@ -1,0 +1,48 @@
+// -- Social networks --
+.social-network{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px -15px;
+	@include media-tablet {
+		justify-content: flex-start;
+		margin: 0px -10px;
+	}
+	@include media-tablet-horizontal {
+		margin: 0px -5px;
+	}
+	&__item{
+		padding: 0px 15px;
+		@include media-tablet {
+			padding: 0px 10px;
+		}
+		@include media-tablet-horizontal {
+			padding: 0px 5px;
+		}	
+	}
+	&__link{
+		display: block;
+		height: 24px;
+		width: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: $border-gray;
+		background-color: $color-gray;
+		color: $color-black;
+		transition: $hover-effect;		
+		svg{
+			fill: $color-black;
+			width: 14px;
+			height: 14px;		
+		}
+		&:hover{
+			background-color: $color-black;
+			color: $color-gray;
+			svg{
+				fill: $color-gray;				
+			}
+		}
+	}
+}

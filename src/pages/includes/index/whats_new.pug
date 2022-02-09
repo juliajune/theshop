@@ -1,0 +1,17 @@
+//- Include new item mixin
+//- mixin whatsNewItem(image, caption, title, subtitle)
+
+include ../../modules/new-item
+
+//----- Whats new -----
+.section.whats-new
+	.container
+		h2.unit-title.unit-title_align-center.unit-title_line-decor whats new
+		.whats-new__content
+			.whats-new__item.new-item
+				+whatsNewItem('img/new-item-1.jpg', 'shop women', 'time to sleep', 'spring collection 2014')
+			.whats-new__item.new-item
+				+whatsNewItem('img/new-item-1.jpg', 'shop women', 'time to sleep', 'spring collection 2014')
+			.whats-new__item.new-item
+				+whatsNewItem('img/new-item-1.jpg', 'shop women', 'time to sleep', 'spring collection 2014')
+//----- /Whats new -----

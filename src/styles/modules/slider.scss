@@ -1,0 +1,129 @@
+@import '../local_modules/slick-carousel/slick/slick.css';
+@import '../local_modules/slick-carousel/slick/slick-theme.css';
+
+
+// -- Slider --
+.slider-desktop{
+	display: none;
+	@include media-tablet-horizontal {
+        display: block;
+        &__item{
+
+	    	background: url(../img/main-slider-desktop-1.jpg) 100% 100% no-repeat;
+			background-size: cover; 
+		}
+		&__content-wrap{
+			position: relative;
+			background-color: blue;
+		}
+		&__content{
+			position: absolute;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			max-width: 960px;
+			text-align: right;
+		}
+		&__text{
+			font-size: 16px;
+			line-height: 18px;
+			text-transform: uppercase;
+			font-family: $font-text;
+			margin-bottom: 20px;
+			font-weight: 300;
+			color: $color-black;
+		}
+		&__title{
+			font-size: 60px;
+			line-height: 62px;
+			text-transform: capitalize;
+			font-family: $font-title;
+			color: $color-black;
+			margin-bottom: 20px;
+		}
+		&__button{
+			width: 250px;
+		}
+	}
+}
+
+.slider{
+	&__item{
+		position: relative;
+	}
+	&__content{
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		text-align: left;
+		width: 50%;
+		padding: 5px;
+		@include media-tablet {
+			width: 60%;
+			text-align: center;
+		}
+	}
+	&__text{
+		display: none;
+		@include media-tablet {
+			display: block;
+			font-size: 16px;
+			line-height: 18px;
+			text-transform: uppercase;
+			font-family: $font-text;
+			margin-bottom: 20px;
+			font-weight: 300;
+			color: $color-black;
+		}
+	}
+	&__title{
+		margin-bottom: 20px;		
+	}
+	&__button{
+		display: block;
+		width: 120px;
+		@include media-tablet {
+			display: none;
+		}		
+	}
+	&__button-tablet{
+		width: 250px;
+		display: none;
+		@include media-tablet {
+			display: block;
+		}		
+	}
+	@include media-tablet-horizontal {
+		display: none;
+	}
+
+}
+
+
+.slider-title{
+	font-size: 24px;
+	line-height: 22px;
+	text-transform: capitalize;
+	font-family: $font-title;
+	color: $color-black;
+	@include media-tablet {
+		font-size: 46px;
+		line-height: 48px;
+	}
+	@include media-tablet-horizontal {
+		font-size: 60px;
+		line-height: 62px;
+	}				
+}
+
+.slider-text{
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+	font-family: $font-text;
+	font-weight: 300;
+	color: $color-black;
+}

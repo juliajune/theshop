@@ -1,0 +1,555 @@
+@import "mixins/media.scss";
+
+@import "utils/variables";
+
+@import "utils/fonts";
+
+@import "common/global";
+
+@import "common/header";
+
+@import "common/footer";
+
+@import "modules/include-modules";
+
+@import 'node_modules/nouislider/dist/nouislider.min';
+
+//Rang slider
+
+// Закрашенная область между ползунками
+.noUi-connect{
+	background-color: #eaeaea;
+}
+
+// Высота слайдера-полоски
+.noUi-horizontal{
+	height: 5px;
+}
+
+// Внешний вид слайдера-полоски
+.noUi-target{
+	background: $color-white;
+	border-radius: 2px;
+	border: $border-gray;
+    box-shadow: none;
+}
+
+// Размеры и расположение ползунка
+.noUi-horizontal .noUi-handle{
+	width: 11px;
+	height: 11px;
+	right: 0px;
+	top: -4px;
+}
+
+// Внешний вид ползунка
+.noUi-handle {
+    border: $border-gray;
+    border-radius: 50%;
+    background: $border-gray-light;
+    cursor: default;
+    box-shadow: none;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+	content: none;	
+}
+
+.slider__input-wrap{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.slider__input{
+	display: inline-block;
+	width: 42px;
+	background-color: $color-white;
+	text-align: center;
+	color: $color-black;
+	font-family: $font-text;
+	text-transform: uppercase;
+	height: 24px;
+	line-height: 24px;
+	padding: 2px 2px;
+	border: $border-gray;
+}
+
+//Страницы
+.page{
+	&__breadcrumbs{
+		min-height: 40px;
+		border-top: $border-gray;
+		padding: 3px 0px;
+	}
+	&__title{
+		min-height: 50px;
+		line-height: 50px;
+		border: $border-gray;
+		border-bottom: 0px;
+		font-family: $font-title;
+		text-transform: uppercase;
+		font-color: $color-black;
+		font-size: 24px;
+		padding:10px 15px; 
+	}
+	&__breadcrumbs{
+		display: none;
+		@include media-tablet{
+			display: block;
+		}
+	}
+	&__container{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		@include media-tablet-horizontal {
+    		flex-direction: row;
+    		justify-content: space-between;		
+    	}
+
+	}
+	&__content{
+		width: 100%;
+		@include media-tablet-horizontal {
+    		width: 74%;
+    		order: 1;	
+    	}
+		
+	}
+	&__sidebar{
+		width: 100%;
+		@include media-tablet-horizontal {
+    		width: 24%;
+    		order: 2;	
+    	}
+
+	}
+}
+
+.page-sidebar{
+	&__widget:not(:last-child){
+		margin-bottom: 20px;
+	}
+}
+
+//Товары в корзине
+.cart-products{
+	border: $border-gray;
+	&__item{
+		margin-bottom: 10px;
+	}
+}
+
+.cart-prod{
+	background-color: $color-gray-light;
+
+	&__body{
+		display: flex;
+	}
+	&__img{
+		width: 75px;
+		height: 102px;
+		border: $border-gray;
+		margin-right: 15px;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+	}
+	&__title{
+		font-size: 10px;
+		line-height: 12px;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-color: $color-black;
+		margin-bottom: 8px;
+		a{
+			color: inherit;
+			display: inline-block;
+			padding-bottom: 1px;
+			border-bottom: $border-transparent;
+			transition: $hover-effect;
+			&:hover{
+				border-bottom: $border-gray;
+			}
+		}
+	}
+	&__line{
+		display: flex;
+		margin-bottom: 8px;		
+	}
+	&__item{
+		font-size: 10px;
+		line-height: 12px;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-color: $color-black;
+		margin-right: 10px;
+	}
+	&__button{
+		background-color: transparent;
+		font-family: $font-text-second;
+		font-size: 11px;
+		color: $color-black;
+		text-decoration: underline;
+		border: 0;
+		box-shadow: none;
+		height: 20px;
+		text-align: center;
+		padding: 5px;
+		svg{
+			fill: $color-black;
+			width: 16px;
+			height: 16px;
+		}
+		&:hover{
+			color: $color-gray;
+			text-decoration: none;
+			cursor: pointer;
+			svg{
+				fill: $color-gray;				
+			}
+		}
+	}
+
+}
+
+.delete-button{
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	background-color: transparent;
+	color: $color-black;
+	border: 0;
+	box-shadow: none;
+	transition: $hover-effect;
+	cursor: pointer;
+	&:hover{
+		color: $color-gray;
+	}
+}
+
+//-- Like table
+.cart-table{
+	&__tr{
+		display: flex;
+		padding: 15px 20px;
+		background-color: $color-gray-light;
+		border: $border-gray;
+	}
+	&__td{
+
+	}
+}
+
+.cart-prod__specifications{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	span{
+		display: block;
+	}
+	@include media-tablet {
+    	flex-direction: column;   		
+    }
+}
+
+
+//Cart total
+.cart-total{
+	&__row{
+		display: flex;
+		align-items: center;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding-bottom: 30px;
+		&_bottom{
+			padding-top: 25px;
+			font-size: 13px;
+			font-weight: 700;
+			border-top: $border-gray;
+		}
+	}
+	&__name{
+		width: 60%;
+	}
+	&__value{
+		width: 40%;
+		text-align: right;
+		&_big{
+			font-size: 18px;
+		}
+	}
+}
+
+// Inline form with arrow right button
+.form-inline-arrow{
+	&__group{
+		position: relative;
+	}
+	&__input{}
+	&__button{
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 30px;
+		height: 30px;
+		background-color: $color-transparent;
+		border: 0;
+		box-shadow: none;
+		text-align: center;
+		padding: 3px;
+		$transition: $hover-effect;
+		svg{
+			height: 14px;
+			width: 14px;
+			fill: $color-black;
+		}
+		&:hover{
+			cursor: pointer;
+			svg{
+				fill: $color-gray;
+				$transition: $hover-effect;
+			}
+		}
+	}	
+}
+
+.discount{
+	&__title{
+		margin-bottom: 30px;
+	}
+}
+
+// -- Support block --
+.support{
+	font-size: 11px;
+	font-family: $font-text-second;
+	&__title{
+		color: $color-gold;
+		text-transform: capitalize;
+		margin-bottom: 8px;
+	}
+	p{
+		color: $color-gray;
+		margin-bottom: 8px;
+	}
+	a{
+		color: $color-gray;
+		transition: $hover-effect;
+		&:hover{
+			color: $color-black;
+			text-decoration: underline;
+		}
+	}
+}
+
+.page{
+	&__row{
+		display: flex;
+		@include media-tablet {
+    		margin: 0px -10px 				
+    	}
+	}
+	&__col{
+		@include media-tablet {
+    		width: 50%;
+    		padding: 0px 10px;    				
+    	}
+    	@include media-tablet-horizontal {
+    		width: 33.33%; 		
+    	}
+	}
+}
+
+
+//-- Like table
+.cart-table{
+	&__tr{
+		display: flex;
+		padding: 15px 20px;
+		background-color: $color-gray-light;
+		border: $border-gray;
+	}
+	&__td{
+
+	}
+}
+
+.cart-prod__specifications{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	span{
+		display: block;
+	}
+	@include media-tablet {
+    	flex-direction: column;   		
+    }
+}
+
+.products-cart{
+	border: $border-gray;
+	&__head{
+		background-color: $color-white;
+		color: $color-black;
+		font-size: 12px;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-color: $color-black;
+		display: flex;
+		align-items: stretch;
+		min-height: 50px;		
+		@include media-tablet{
+			padding: 10px 25px;    		  		
+  		}
+  	@include media-tablet-horizontal {
+		padding: 10px 35px;    		  		
+  	}
+	}
+	&__item:not(:last-child){
+		margin-bottom: 15px;		
+	}
+}
+
+.prod-card{
+	padding: 15px 20px;
+	background-color: $color-gray-light;
+	&__image{
+
+	}	
+}
+
+.prod-cart{
+	padding: 15px 20px;
+	background-color: $color-gray-light;
+	font-size: 10px;
+	line-height: 12px;
+	font-family: $font-text;
+	text-transform: uppercase;
+	font-color: $color-black;
+	display: flex;
+	align-items: stretch;
+	@include media-tablet {
+		padding: 10px 25px;    		  		
+  	}
+  	@include media-tablet-horizontal {
+		padding: 10px 35px;    		  		
+  	}
+	&__body{
+		display: flex;
+		align-items: stretch;
+		flex-direction: row;
+		background-color: yellow;
+		@include media-tablet {
+    		width: 40%;    		   				
+    	}
+	}
+	&__img{
+		width: 75px;
+		height: 102px;
+		border: $border-gray;
+		margin-right: 15px;
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+
+	}
+	&__title{		
+		margin-bottom: 8px;
+		a{
+			color: inherit;
+			display: inline-block;
+			padding-bottom: 1px;
+			border-bottom: $border-transparent;
+			transition: $hover-effect;
+			&:hover{
+				border-bottom: $border-gray;
+			}
+		}
+	}
+	&__info{
+		font-size: 10px;
+		line-height: 12px;
+		font-family: $font-text;
+		display: flex;
+		flex-direction: row;
+		@include media-tablet {
+    		flex-direction: column;   		
+  		}
+	}
+	&__price{
+		background-color: blue;
+		@include media-tablet {
+    		width: 20%;    		 				
+    	}
+	}
+	&__quantity{
+		@include media-tablet {
+    		width: 20%;    		 				
+    	}
+	}
+	&__price-total{
+		@include media-tablet {
+    		width: 20%;    		 				
+    	}
+    	&_text-right{
+    		text-align: right;
+
+    	}
+	}
+
+
+	&__line{
+		display: flex;
+		margin-bottom: 8px;		
+	}
+	&__item{
+		font-size: 10px;
+		line-height: 12px;
+		font-family: $font-text;
+		text-transform: uppercase;
+		font-color: $color-black;
+		margin-right: 10px;
+	}
+	&__button{
+		background-color: transparent;
+		font-family: $font-text-second;
+		font-size: 11px;
+		color: $color-black;
+		text-decoration: underline;
+		border: 0;
+		box-shadow: none;
+		height: 20px;
+		text-align: center;
+		padding: 5px;
+		svg{
+			fill: $color-black;
+			width: 16px;
+			height: 16px;
+		}
+		&:hover{
+			color: $color-gray;
+			text-decoration: none;
+			cursor: pointer;
+			svg{
+				fill: $color-gray;				
+			}
+		}
+	}
+}

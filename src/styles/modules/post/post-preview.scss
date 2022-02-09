@@ -1,0 +1,10 @@
+//-- Post preview --
+.post-preview{
+	display: block;
+	overflow: hidden;
+	img{
+		display: block;
+		width: 100%;
+		height: auto;		
+	}
+}

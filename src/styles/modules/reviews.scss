@@ -1,0 +1,23 @@
+//-- Reviews block--
+.reviews{
+	padding: 20px 8px;
+	border: 1px solid $color-gray-more-light;
+	&__title{
+		text-align: center;
+		font-size: 24px;
+		font-family: $font-title;
+		text-transform: uppercase;
+		color: $color-black;
+		margin-bottom: 20px;
+	}
+	&__item{
+		margin-bottom: 4px;
+		&:last-child{
+			margin-bottom: 12px;
+		}
+	}
+	&__button{
+		width: 100px;
+		margin-left: auto;
+	}
+}

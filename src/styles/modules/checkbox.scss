@@ -1,0 +1,64 @@
+// -- Checkbox group --
+.checkbox-group{
+	&__item{
+		margin-bottom: 15px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+// -- Checkbox --
+.checkbox{
+	&__button{
+		display: none;
+	}
+	&__label{
+		display: block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 17px;
+		font-size: 10px;
+		font-family: $font-text;
+		color: $color-black;
+		text-transform: uppercase;
+		span{
+			display: inline-block;
+			border-bottom: $border-transparent;
+			transition: $hover-effect;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 1px;			
+			width: 9px;
+			height: 9px;
+			background-color: $color-white;
+			border: 1px solid $color-gray;			
+		}
+		&::after{
+			content: " ";
+			display: block;
+			position: absolute;
+			color: black;
+			top: -2px;
+			left: 1px;
+			transition: $hover-effect;									
+		}
+		&:hover{
+			span{
+				display: inline-block;
+				border-bottom: $border-gray;
+				transition: $hover-effect;
+			}
+		}
+	}
+}//.radio
+
+.checkbox__button:checked+.checkbox__label::after{
+	content: "✔";			
+}
+
+	

@@ -1,0 +1,25 @@
+.input{
+	display: inline-block;
+	width: 100%;
+	background-color: $color-white;
+	color: $color-black;
+	font-family: $font-text;
+	height: 30px;
+	line-height: 30px;
+	padding: 2px 15px;
+	border: $border-gray;
+	&::placeholder{
+		font-size: 11px;
+		color: $color-gray;
+		font-family: $font-text-second;		
+		opacity: 1;
+		transition: $hover-effect;
+		}
+	&:focus{
+		box-shadow: $box-shadow;		
+	}
+	&:focus::placeholder{
+		opacity: 0;
+		transition: $hover-effect;			
+	}
+}

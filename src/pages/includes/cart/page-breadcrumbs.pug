@@ -1,0 +1,12 @@
+- 
+	var breadcrumbs = [
+		{name: 'Home', link: 'index.html'},
+		{name: 'women', link: 'cart.html'},
+		{name: 'dress', link: 'cart.html'}, 
+		{name: 'top', link: 'cart.html'},         
+	];
+
+.page-breadcrumbs
+	+breadcrumbsMixin(breadcrumbs)
+	a.page-breadcrumbs__return(href="javascript:history.back();")
+		span Return to Previous Page

@@ -1,0 +1,20 @@
+// -- Post meta --
+.post-meta{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	color: $color-black;
+	a{
+		display: block;
+		color: $color-black;
+		border-bottom: $border-transparent;
+		transition: $hover-effect;
+		&:hover{
+			border-bottom: $border-gray;
+			cursor: pointer;
+		}
+	}
+}

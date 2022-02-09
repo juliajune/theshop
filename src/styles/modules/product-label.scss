@@ -1,0 +1,39 @@
+//-- Product label --
+.product-label{
+	position: relative;
+	span{
+		display: block;
+    	position: absolute;
+    	left: 3px;
+    	top: 5px;
+    	font-size: 11px;
+		line-height: 13px;
+		font-family: $font-title;
+		color: $color-white;
+		font-weight: 700;
+		text-transform: uppercase;
+		z-index: 99;
+	}
+	&::before{
+		content:'';
+		display: block;
+    	position: absolute;
+    	left: 0%;
+    	top: 0%;
+    	border: 25px solid transparent;
+    	border-left: 25px solid $color-gray; 
+    	border-top: 25px solid $color-gray;    	
+    }
+    &_black{
+    	&::before{
+    		border-left-color: $color-black;
+    		border-top-color: $color-black;
+    	}    	
+    }
+    &_red{
+    	&::before{
+    		border-left-color: $color-red;
+    		border-top-color: $color-red;
+    	}     	
+    }		
+}

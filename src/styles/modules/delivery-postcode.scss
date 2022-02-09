@@ -1,0 +1,13 @@
+//-- Delivery postcode --
+.delivery-postcode{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__input{
+		width: 65%;
+		margin-right: 25px;
+	}
+	&__button{
+		width: 40%;
+	}	
+}
